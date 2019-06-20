@@ -11,6 +11,7 @@ public class BeginSequenceTimer : MonoBehaviour
     private GameObject _CanvasObject;
     private int _loop;
     private GridSystem _grid;
+    private Checker _checker;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class BeginSequenceTimer : MonoBehaviour
         _CanvasObject = GameObject.Find("Canvas").transform.GetChild(1).gameObject;
         _text = _CanvasObject.GetComponent<Text>();
         _grid = GameObject.Find("Grid").GetComponent<GridSystem>();
+        _checker = GetComponent<Checker>();
         
         StartCoroutine(CountDown());
     }
@@ -33,5 +35,8 @@ public class BeginSequenceTimer : MonoBehaviour
             if(_enemy) _enemy.GetComponent<Enemy>()._canMove = true;
         }
         _CanvasObject.SetActive(false);
+        _checker.FillTheirSequence(_grid.GetAllEnemyInNodes());
+        Debug.Log(_checker.CheckSequence());
+        _grid.RemoveAllEnemyFromNode();
     }
 }

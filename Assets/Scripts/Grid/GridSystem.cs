@@ -27,7 +27,9 @@ public class GridSystem : MonoBehaviour {
     {
         List<int> returnArray = new List<int>(_gridLengt);
         for (int i = 0; i < _gridLengt; i++) {
-            returnArray.Add(Nodes[i]._getCurrentEnemy().GetComponent<Enemy>()._enemyIndexNumber);
+            if (Nodes[i]._getCurrentEnemy() != null) {
+                returnArray.Add(Nodes[i]._getCurrentEnemy().GetComponent<Enemy>()._enemyIndexNumber);
+            }
         }
         return returnArray;
     }
