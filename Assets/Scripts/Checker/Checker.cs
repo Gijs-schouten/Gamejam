@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Checker : MonoBehaviour
-{
+public class Checker : MonoBehaviour {
     private List<int> _mySequence; //the official sequence
     private List<int> _theirSequence; //the sequence of the player
 
@@ -23,7 +22,7 @@ public class Checker : MonoBehaviour
         if (mySequenceLength == theirSequenceLength) {
             int counter = 0;
             for (int i = 0; i < mySequenceLength; i++) {
-                if(_mySequence[i] == _theirSequence[i]) {
+                if (_mySequence[i] == _theirSequence[i]) {
                     counter++;
                 }
             }
