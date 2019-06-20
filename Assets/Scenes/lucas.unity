@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222853458}
+      - m_Target: {fileID: 56865401}
         m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
@@ -265,8 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce9929ca5df341468f7fc28e53d768d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6787079578351598675, guid: 57f1c24c051607f43b15180d3152187d, type: 3}
+  enemy: {fileID: 8223380228080161525, guid: fd01bc74c5d13f74bb005141e7431704, type: 3}
   MouseInput: {fileID: 337137492}
+  _enemyIndex: 0
 --- !u!1 &222853453
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,8 +413,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce9929ca5df341468f7fc28e53d768d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6787079578351598675, guid: 57f1c24c051607f43b15180d3152187d, type: 3}
+  enemy: {fileID: 8223380228080161525, guid: fd01bc74c5d13f74bb005141e7431704, type: 3}
   MouseInput: {fileID: 337137492}
+  _enemyIndex: 3
 --- !u!1 &251969317
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +541,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a78049998f36744e96e912f286c66c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &446819887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446819888}
+  m_Layer: 0
+  m_Name: DeathPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446819888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446819887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &478370919
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222853458}
+      - m_Target: {fileID: 957642491}
         m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
@@ -880,8 +912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce9929ca5df341468f7fc28e53d768d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6787079578351598675, guid: 57f1c24c051607f43b15180d3152187d, type: 3}
+  enemy: {fileID: 8223380228080161525, guid: fd01bc74c5d13f74bb005141e7431704, type: 3}
   MouseInput: {fileID: 337137492}
+  _enemyIndex: 2
 --- !u!1 &1324350875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1156,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 222853458}
+      - m_Target: {fileID: 1684336532}
         m_MethodName: ButtonClick
         m_Mode: 1
         m_Arguments:
@@ -1185,8 +1218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ce9929ca5df341468f7fc28e53d768d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 6787079578351598675, guid: 57f1c24c051607f43b15180d3152187d, type: 3}
+  enemy: {fileID: 8223380228080161525, guid: fd01bc74c5d13f74bb005141e7431704, type: 3}
   MouseInput: {fileID: 337137492}
+  _enemyIndex: 1
 --- !u!1 &1782848111
 GameObject:
   m_ObjectHideFlags: 0
