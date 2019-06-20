@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
     public AudioClip[] _clips;
+    public AudioClip _blankNoise;
     public AudioSource _source;
 
     void Awake() {
@@ -12,7 +13,11 @@ public class AudioManager : MonoBehaviour {
     }
 
     public void PlayAudioClip(int _enemyID) {
-        _source.clip = _clips[_enemyID];
+        if (_enemyID == -1) {
+            _source.clip = _blankNoise;
+        } else {
+            _source.clip = _clips[_enemyID];
+        }
         _source.Play();
     }
 }
