@@ -7,13 +7,14 @@ public class BeginSequenceGenerator : MonoBehaviour {
     public int _beginSequenceLength;
     public int _NumberOfEnemyTypes;
 
+    public bool _audioDone = false;
+
     public AudioManager _audioManager;
     public Checker _checker;
 
     void Start() {
         _beginSequenceInts = generateRandomInts(_beginSequenceLength);
         _checker.FillMySequence(_beginSequenceInts);
-        //play beginsequenceints audio
         StartCoroutine(PlayClips());
     }
 
@@ -29,7 +30,8 @@ public class BeginSequenceGenerator : MonoBehaviour {
     private IEnumerator PlayClips() {
         foreach (int _clip in _beginSequenceInts) {
             _audioManager.PlayAudioClip(_clip);
-            yield return new WaitForSeconds(_audioManager._source.clip.length);
+            yield return new WaitForSeconds(_audioManager._source.clip.length );
         }
+        _audioDone = true;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseInput : MonoBehaviour
 {
-    private bool _canbuild = false;
+    public bool _canbuild = false;
     private GameObject _spawnedObject;
 
     public Vector3 MousePosition() 
@@ -61,5 +61,11 @@ public class MouseInput : MonoBehaviour
     {
         _spawnedObject = null;
         _canbuild = false;
+
+    }
+
+    public void DestroyBuildable() {
+        Destroy(_spawnedObject);
+        TurnOffPlaceMode();
     }
 }

@@ -14,7 +14,7 @@ public class GridSystem : MonoBehaviour {
     void Start() {
         Nodes = new Node[_gridLengt];
         for (int i = 0; i < _gridLengt; i++) {
-            GameObject _spawnedObject = Instantiate(_node, transform.position + new Vector3(i + (i * _gridgap), 0, 0), Quaternion.identity);
+            GameObject _spawnedObject = Instantiate(_node, transform.position + new Vector3(-i + (i * -_gridgap), 0, 0), Quaternion.identity);
             Nodes[i] = _spawnedObject.GetComponent<Node>();
             RemoveEnemysFromNodes += Nodes[i].RemoveEnemy;
         }
