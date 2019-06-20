@@ -18,6 +18,7 @@ public class EnemyButton : MonoBehaviour
 
     public void ButtonClick() 
     {
+        //it's funny because it's true
         if (_mouseInput._canbuild != false) {
             MouseInput.DestroyBuildable();
         }

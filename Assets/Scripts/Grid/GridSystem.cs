@@ -27,8 +27,18 @@ public class GridSystem : MonoBehaviour {
     {
         List<int> returnArray = new List<int>(_gridLengt);
         for (int i = 0; i < _gridLengt; i++) {
-            returnArray[i] = Nodes[i]._getCurrentEnemy().GetComponent<Enemy>()._enemyIndexNumber;
+            returnArray.Add(Nodes[i]._getCurrentEnemy().GetComponent<Enemy>()._enemyIndexNumber);
         }
         return returnArray;
     }
+
+    public List<GameObject> GetAllEnemyInNodesAsGameObject() //nog testen
+    {
+        List<GameObject> returnArray = new List<GameObject>(_gridLengt);
+        for (int i = 0; i < _gridLengt; i++) {
+            returnArray.Add(Nodes[i]._getCurrentEnemy());
+        }
+        return returnArray;
+    }
+
 }
