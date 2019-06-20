@@ -23,11 +23,11 @@ public class GridSystem : MonoBehaviour {
     {
         RemoveEnemysFromNodes();
     }
-    public GameObject[] GetAllEnemyInNodes() //nog testen
+    public List<int> GetAllEnemyInNodes() //nog testen
     {
-        GameObject[] returnArray = new GameObject[_gridLengt];
+        List<int> returnArray = new List<int>(_gridLengt);
         for (int i = 0; i < _gridLengt; i++) {
-            returnArray[i] = Nodes[i].GetComponent<Node>()._getCurrentEnemy();
+            returnArray[i] = Nodes[i]._getCurrentEnemy().GetComponent<Enemy>()._enemyIndexNumber;
         }
         return returnArray;
     }
