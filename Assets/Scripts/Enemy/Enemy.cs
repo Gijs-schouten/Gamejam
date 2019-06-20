@@ -6,11 +6,6 @@ public class Enemy : MonoBehaviour {
     private bool _isDead = false;
 
     [SerializeField]
-    private AudioClip[] _audioNotes;
-    [SerializeField]
-    private AudioSource _audioNote;
-
-    [SerializeField]
     private Transform _destinationPoint;
 
     [SerializeField]
@@ -19,16 +14,16 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     private int _enemyIndexNumber;
 
+    [SerializeField]
+    private AudioManager _audioManager;
+
     private void Start() {
-        SetAudioSource(_audioNotes, _audioNote, _enemyIndexNumber);
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     private void Update() {
+        //TODO: Bool on start
         MovementToDestinationPoint(_destinationPoint);
-    }
-
-    private void SetAudioSource(AudioClip[] audioNotes, AudioSource audioNote, int indexNumber) {
-        audioNote.clip = audioNotes[indexNumber];
     }
 
     private void MovementToDestinationPoint(Transform destinationPoint) {
@@ -41,13 +36,13 @@ public class Enemy : MonoBehaviour {
 
     private void OnReachingDestinationPoint(bool isDead) {
         if (!isDead) {
-            StartCoroutine(OnDeathSequence(_audioNote));
+            StartCoroutine(OnDeathSequence());
         }
     }
 
-    IEnumerator OnDeathSequence(AudioSource audioNote) {
-        audioNote.Play();
-        yield return new WaitForSeconds(audioNote.clip.length);
+    IEnumerator OnDeathSequence() {
+        _audioManager.PlayAudioClip(_enemyIndexNumber);
+        yield return new WaitForSeconds(_audioManager._source.clip.length);
         gameObject.SetActive(false);
     }
 }
