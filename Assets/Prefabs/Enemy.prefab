@@ -46,14 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f4e466dc4a2c14fa0c33a463f08df2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioNotes:
-  - {fileID: 8300000, guid: ffc9a926035e0964c9fb54fed94a6647, type: 3}
-  - {fileID: 8300000, guid: 6ca896311a7a98d4294fc514e1c0e370, type: 3}
-  - {fileID: 8300000, guid: e106f06836e6a104ca7a962ddbfc8afa, type: 3}
-  - {fileID: 8300000, guid: 12f0c7159c5e7774abe2596f718e390a, type: 3}
-  _audioNote: {fileID: 8223380228080161528}
+  _canMove: 0
   _enemySpeed: 5
-  _enemyIndexNumber: 2
+  _enemyIndexNumber: 0
+  _audioManager: {fileID: 0}
 --- !u!82 &8223380228080161528
 AudioSource:
   m_ObjectHideFlags: 0

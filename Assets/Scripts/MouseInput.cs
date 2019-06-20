@@ -7,7 +7,6 @@ public class MouseInput : MonoBehaviour
     private bool _canbuild = false;
     private GameObject _spawnedObject;
 
-
     public Vector3 MousePosition() 
     {
         RaycastHit hit;

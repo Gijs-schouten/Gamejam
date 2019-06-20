@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    private bool _isDead = false;
 
-    [SerializeField]
+    private bool _isDead = false;
+    public bool _canMove = false;
+
     private Transform _destinationPoint;
 
-    [SerializeField]
-    private float _enemySpeed;
+    [SerializeField] private float _enemySpeed;
 
-    [SerializeField]
-    private int _enemyIndexNumber;
+    public int _enemyIndexNumber;
 
-    [SerializeField]
-    private AudioManager _audioManager;
+    [SerializeField] private AudioManager _audioManager;
 
     private void Start() {
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        _destinationPoint = GameObject.Find("DeathPoint").transform;
     }
 
     private void Update() {
-        //TODO: Bool on start
-        MovementToDestinationPoint(_destinationPoint);
+        if(_canMove) {
+            MovementToDestinationPoint(_destinationPoint);
+        }
+
     }
 
     private void MovementToDestinationPoint(Transform destinationPoint) {
