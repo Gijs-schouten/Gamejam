@@ -15,9 +15,13 @@ public class Enemy : MonoBehaviour {
 
     private AudioManager _audioManager;
 
+    [SerializeField]
+    private DestinationPoint _destinationPointScript;
+
     private void Start() {
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _destinationPoint = GameObject.Find("DeathPoint").transform;
+        _destinationPointScript = _destinationPoint.GetComponent<DestinationPoint>();
     }
 
     private void Update() {
@@ -28,9 +32,13 @@ public class Enemy : MonoBehaviour {
     }
 
     private void MovementToDestinationPoint(Transform destinationPoint) {
-        transform.position = Vector3.MoveTowards(this.transform.position, destinationPoint.transform.position, _enemySpeed * Time.deltaTime);
+        if(!_destinationPointScript._enemyIsOnPoint)
+        {
+            transform.position = Vector3.MoveTowards(this.transform.position, destinationPoint.transform.position, _enemySpeed * Time.deltaTime);
+        }
 
         if (this.transform.position == destinationPoint.transform.position) {
+            _destinationPointScript._enemyIsOnPoint = true;
             OnReachingDestinationPoint(_isDead);
         }
     }
@@ -44,6 +52,7 @@ public class Enemy : MonoBehaviour {
     IEnumerator OnDeathSequence() {
         _audioManager.PlayAudioClip(_enemyIndexNumber);
         yield return new WaitForSeconds(_audioManager._source.clip.length);
-        gameObject.SetActive(false);
+        _destinationPointScript._enemyIsOnPoint = false;
+        Destroy(this.gameObject);
     }
 }
