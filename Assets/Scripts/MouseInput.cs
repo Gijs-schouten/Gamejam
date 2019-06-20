@@ -25,13 +25,10 @@ public class MouseInput : MonoBehaviour
     {
         if(_canbuild)
         {
-            print("build");
             _spawnedObject.transform.position = MousePosition();
             RaycastHit hit;
             if (Physics.Raycast(MousePosition(), new Vector3(0,0,1), out hit, Mathf.Infinity))
             {
-                print(hit);
-                print("hit");
                 if (Input.GetMouseButtonDown(0)) 
                 {
                     if (hit.collider.gameObject.GetComponent<Node>().CanPlaceEnemyHere()) 

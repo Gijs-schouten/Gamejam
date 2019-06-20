@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a717dbb8e60e1fe458df0714492ce6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gridLengt: 8
+  _gridLengt: 1
   _gridgap: 0.05
   _node: {fileID: 1743571289907090128, guid: dc4919472fed9e14a8c1cbfd790690a9, type: 3}
 --- !u!4 &1498543670
@@ -1179,7 +1179,7 @@ PrefabInstance:
     - target: {fileID: 6959354943488495900, guid: 90c73ca187a59334bbdc5c80c8f31cf5,
         type: 3}
       propertyPath: _beginSequenceLength
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6959354943488495900, guid: 90c73ca187a59334bbdc5c80c8f31cf5,
         type: 3}
