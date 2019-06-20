@@ -12,8 +12,12 @@ public class BeginSequenceGenerator : MonoBehaviour {
     public AudioManager _audioManager;
     public Checker _checker;
 
-    void Start() {
+    private void Start() {
         _beginSequenceInts = generateRandomInts(_beginSequenceLength);
+        StartSequence();
+    }
+
+    private void StartSequence() {
         _checker.FillMySequence(_beginSequenceInts);
         StartCoroutine(PlayClips());
     }
@@ -21,10 +25,15 @@ public class BeginSequenceGenerator : MonoBehaviour {
     private List<int> generateRandomInts(int length) {
         List<int> _intArr = new List<int>();
         for (int i = 0; i < length; i++) {
-            int temp = (int)Random.Range(-1f, (float)_NumberOfEnemyTypes);
+            int temp = (int)Mathf.Floor(Random.Range(-1f, (float)_NumberOfEnemyTypes));
             _intArr.Add(temp);
         }
         return _intArr;
+    }
+
+    private List<int> extendIntList(List<int> _originalSequence) {
+        _originalSequence.Add((int)Mathf.Floor(Random.Range(-1f, (float)_NumberOfEnemyTypes)));
+        return _originalSequence;
     }
 
     private IEnumerator PlayClips() {
@@ -33,5 +42,10 @@ public class BeginSequenceGenerator : MonoBehaviour {
             yield return new WaitForSeconds(_audioManager._source.clip.length );
         }
         _audioDone = true;
+    }
+
+    public void ExtendSequence() {
+        _beginSequenceInts = extendIntList(_beginSequenceInts);
+        StartSequence();
     }
 }
