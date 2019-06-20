@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BeginSequenceGenerator : MonoBehaviour {
-    private List<int> _beginSequenceInts;
+    public List<int> _beginSequenceInts;
     public int _beginSequenceLength;
     public int _NumberOfEnemyTypes;
 
