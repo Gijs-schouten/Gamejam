@@ -8,13 +8,25 @@ public class EnemyButton : MonoBehaviour
     [SerializeField] private MouseInput MouseInput;
     [SerializeField] private int _enemyIndex;
 
+    private AudioManager _audioManager;
+    [SerializeField] private MouseInput _mouseInput;
     private Enemy _enemyScript;
+
+    private void Start() {
+        _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+    }
 
     public void ButtonClick() 
     {
-        _enemyScript = enemy.GetComponent<Enemy>();
-        _enemyScript._enemyIndexNumber = _enemyIndex;
+        if (_mouseInput._canbuild != false) {
+            MouseInput.DestroyBuildable();
+        }
+        if (_mouseInput._canbuild == false) {
+            _enemyScript = enemy.GetComponent<Enemy>();
+            _enemyScript._enemyIndexNumber = _enemyIndex;
+            _audioManager.PlayAudioClip(_enemyIndex);
+            MouseInput.TurnOnPlaceMode(enemy);
+        }
 
-        MouseInput.TurnOnPlaceMode(enemy);
     }
 }

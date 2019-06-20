@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour {
 
     public int _enemyIndexNumber;
 
-    [SerializeField] private AudioManager _audioManager;
+    private AudioManager _audioManager;
 
     private void Start() {
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
