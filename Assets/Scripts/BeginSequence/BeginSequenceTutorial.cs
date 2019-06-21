@@ -40,7 +40,21 @@ public class BeginSequenceTutorial : MonoBehaviour {
 					HighlightEnemy(_enemySlots[3].transform);
 					yield return new WaitForSeconds(_time);
 					break;
-			}
+
+                case 4:
+                    HighlightEnemy(_enemySlots[4].transform);
+                    yield return new WaitForSeconds(_time);
+                    break;
+
+                case 5:
+                    HighlightEnemy(_enemySlots[5].transform);
+                    yield return new WaitForSeconds(_time);
+                    break;
+
+                default:
+                    print("fucked up sequence tutorial.");
+                    break;
+            }
 		}
 	}
 
