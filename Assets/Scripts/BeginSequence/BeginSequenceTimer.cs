@@ -46,6 +46,7 @@ public class BeginSequenceTimer : MonoBehaviour {
         }
 		_CanvasObject.SetActive(false);
         Playing = true;
+        _checker.FillTheirSequence(_grid.GetAllEnemyInNodes());
 		yield return new WaitForSeconds(5);
 		Aniamtoekasmnkenko();
 		Going();

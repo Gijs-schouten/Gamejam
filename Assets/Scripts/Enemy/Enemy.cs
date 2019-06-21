@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour {
 
     private SpriteManager _spriteManager;
 
+    public SplashOnDeath _splashOnDeath;
+
     private void Start() {
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _destinationPoint = GameObject.Find("DeathPoint").transform;
@@ -29,6 +31,8 @@ public class Enemy : MonoBehaviour {
         _spriteManager = GameObject.Find("SpriteManager").GetComponent<SpriteManager>();
 		_player = GameObject.Find("Player").GetComponent<Animator>();
 		_spriteManager.InitSprite(gameObject);
+
+        _splashOnDeath = GameObject.Find("OnDeath").GetComponent<SplashOnDeath>();
     }
 
     private void Update() {
@@ -61,6 +65,7 @@ public class Enemy : MonoBehaviour {
 
     IEnumerator OnDeathSequence() {
         _audioManager.PlayAudioClip(_enemyIndexNumber);
+        _splashOnDeath.SplashDeath();
         yield return new WaitForSeconds(_audioManager._source.clip.length);
         _destinationPointScript._enemyIsOnPoint = false;
         Destroy(this.gameObject);
