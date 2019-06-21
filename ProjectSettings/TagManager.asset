@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - node
+<<<<<<< HEAD
   - Enemy
+=======
+  - Background
+>>>>>>> f512d25c88a07f250dcd147604ffa7dc3de0a9ec
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 

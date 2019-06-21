@@ -3,18 +3,12 @@ using UnityEngine;
 
 public class BeginSequenceTutorial : MonoBehaviour {
 
-	[SerializeField]
-	private int _tutorialLevels;
-	[SerializeField]
-	private float _time = 1;
-	[SerializeField]
-	private GameObject[] _enemySlots;
-	[SerializeField]
-	private GameObject _highlight;
-	[SerializeField]
-	private BeginSequenceGenerator _generator;
-	[SerializeField]
-	private GridSystem _system;
+	[SerializeField] private int _tutorialLevels;
+	[SerializeField] private float _time = 1;
+	[SerializeField] private GameObject[] _enemySlots;
+	[SerializeField] private GameObject _highlight;
+	[SerializeField] private BeginSequenceGenerator _generator;
+	[SerializeField] private GridSystem _system;
 	
 	public IEnumerator HighlightAll() {
 		if(_system.GetGridLengt() >= _tutorialLevels) {

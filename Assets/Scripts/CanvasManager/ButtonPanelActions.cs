@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class ButtonPanelActions : MonoBehaviour {
 
+    [SerializeField]
+    private SceneSwitcher _sceneSwitcher;
+
     public void Retry(){
         Debug.Log("Retry");
+        _sceneSwitcher.SwitchScenes(1);
     }
 
-    public void NextLevel() {
-        Debug.Log("Next");
+    public void Menu() {
+        Debug.Log("Menu");
+        _sceneSwitcher.SwitchScenes(0);
     }
 
-    public void Stop() {
-        Debug.Log("Stop");
+    public void StartGame() {
+        _sceneSwitcher.SwitchScenes(1);
+    }
+
+    public void ExitGame() {
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
     }
 }
