@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 264436944813222072}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canMove: 0
   _enemySpeed: 5
-  _enemyIndexNumber: 0
-  _audioManager: {fileID: 0}
+  _enemyIndexNumber: 2
+  _destinationPointScript: {fileID: 0}
 --- !u!82 &8223380228080161528
 AudioSource:
   m_ObjectHideFlags: 0

@@ -50,7 +50,9 @@ public class BeginSequenceTimer : MonoBehaviour {
     public void ResetGame() {
         _CanvasObject.SetActive(true);
         _EnemyButtonManager.UpdateButtons();
-        //sequence moet een extra sound krijgen
+        if(_generator._NumberOfEnemyTypes < 8) {
+            _generator._NumberOfEnemyTypes++;
+        }
         _generator.ExtendSequence();
         _grid.ExtendNodes();
         Playing = false;
