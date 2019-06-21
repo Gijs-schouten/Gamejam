@@ -99,3 +99,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6b63ba37459c3dd4dbd9aeed51ed4aed, type: 3}
   - {fileID: 21300000, guid: 90aa22d22981a3b4bb21085924e91a45, type: 3}
   - {fileID: 21300000, guid: 4d10d13575154c54b93366da86e26474, type: 3}
+  _timeUntilDestroy: 10
