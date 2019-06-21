@@ -12,6 +12,9 @@ public class BeginSequenceGenerator : MonoBehaviour {
     public AudioManager _audioManager;
     public Checker _checker;
 
+	[SerializeField]
+	private BeginSequenceTutorial _tutorial;
+
     private void Start() {
         _beginSequenceInts = generateRandomInts(_beginSequenceLength);
         StartSequence();
@@ -19,7 +22,8 @@ public class BeginSequenceGenerator : MonoBehaviour {
 
     private void StartSequence() {
         _checker.FillMySequence(_beginSequenceInts);
-        StartCoroutine(PlayClips());
+		StartCoroutine(_tutorial.HighlightAll());
+		StartCoroutine(PlayClips());	
     }
 
     private List<int> generateRandomInts(int length) {
