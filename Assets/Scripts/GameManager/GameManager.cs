@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private int maxLevel;
 
+	
+
     void Start() {
         _timer.Going += ChangeGameGoing;
     }
@@ -50,8 +52,9 @@ public class GameManager : MonoBehaviour {
             }
         }
         if (amount <= 0 && _gameGoing) {
-            ChangeGameGoing();
+			ChangeGameGoing();
             SetupCanvasActive();
+
         }
     }
 
@@ -62,4 +65,5 @@ public class GameManager : MonoBehaviour {
     public bool GetGameGoing() {
         return _gameGoing;
     }
+
 }

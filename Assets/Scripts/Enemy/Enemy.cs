@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour {
 
     private AudioManager _audioManager;
 
+	private Animator _player;
+
     [SerializeField]
     private DestinationPoint _destinationPointScript;
 
@@ -25,7 +27,8 @@ public class Enemy : MonoBehaviour {
         _destinationPoint = GameObject.Find("DeathPoint").transform;
         _destinationPointScript = _destinationPoint.GetComponent<DestinationPoint>();
         _spriteManager = GameObject.Find("SpriteManager").GetComponent<SpriteManager>();
-        _spriteManager.InitSprite(gameObject);
+		_player = GameObject.Find("Player").GetComponent<Animator>();
+		_spriteManager.InitSprite(gameObject);
     }
 
     private void Update() {
@@ -44,11 +47,15 @@ public class Enemy : MonoBehaviour {
             _destinationPointScript._enemyIsOnPoint = true;
             OnReachingDestinationPoint(_isDead);
         }
-    }
+		if (this.transform.position.x >= destinationPoint.transform.position.x -4) {
+			_player.SetBool("shoot", true);
+		}
+	}
 
     private void OnReachingDestinationPoint(bool isDead) {
         if (!isDead) {
-            StartCoroutine(OnDeathSequence());
+			
+			StartCoroutine(OnDeathSequence());
         }
     }
 
@@ -58,4 +65,8 @@ public class Enemy : MonoBehaviour {
         _destinationPointScript._enemyIsOnPoint = false;
         Destroy(this.gameObject);
     }
+
+	public void Aniamtoekasmnkenko() {
+		_player.SetBool("shoot", false);
+	}
 }
