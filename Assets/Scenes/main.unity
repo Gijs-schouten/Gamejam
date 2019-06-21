@@ -165,7 +165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154971936
 GameObject:
@@ -425,7 +425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &415028775
 GameObject:
@@ -1192,6 +1192,11 @@ PrefabInstance:
       propertyPath: _timer
       value: 
       objectReference: {fileID: 960082300}
+    - target: {fileID: 6820603312088261524, guid: 5d1c37ac8d30a9141b5cf76359d5b3a2,
+        type: 3}
+      propertyPath: _SceneSwitcher
+      value: 
+      objectReference: {fileID: 931479130}
     - target: {fileID: 6820603312088261525, guid: 5d1c37ac8d30a9141b5cf76359d5b3a2,
         type: 3}
       propertyPath: _text
@@ -7074,7 +7079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782424264
 GameObject:
@@ -7640,11 +7645,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 607984320760145714, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
-        type: 3}
-      propertyPath: _sceneSwitcher
-      value: 
-      objectReference: {fileID: 931479130}
     - target: {fileID: 3359602335683520536, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -7660,6 +7660,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1985868933}
+    - target: {fileID: 607984320760145714, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
+        type: 3}
+      propertyPath: _sceneSwitcher
+      value: 
+      objectReference: {fileID: 931479130}
     - target: {fileID: 7475092930617846387, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
         type: 3}
       propertyPath: m_Color.r

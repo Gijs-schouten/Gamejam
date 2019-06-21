@@ -29,8 +29,8 @@ public class GameManager : MonoBehaviour {
     public void SetupCanvasActive() {
         if (_gridSystem.GetGridLengt() == maxLevel) {
             _SceneSwitcher.SwitchScenes(2);
-            _canvasHandler.SetCanvasActive(false);
-            _canvasHandler.ChangeText(true);
+            //_canvasHandler.SetCanvasActive(false);
+            //_canvasHandler.ChangeText(true);
         } else {
             if (_checker.CheckSequence() == false) {
                 _SceneSwitcher.SwitchScenes(3);
