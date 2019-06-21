@@ -47,6 +47,8 @@ MonoBehaviour:
   _canvasHandler: {fileID: 6820603312088261525}
   _checker: {fileID: 0}
   _gridSystem: {fileID: 0}
+  _timer: {fileID: 0}
+  maxLevel: 3
 --- !u!114 &6820603312088261525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,7 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58860930d3eefd2488af2079503756e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _winText: You did it
-  _loseText: You died
+  _winText: You Win
+  _loseText: You Lose
   _text: {fileID: 0}
-  _Endscreen: {fileID: 0}
+  _NextScreen: {fileID: 0}
+  _WinLoseScreen: {fileID: 0}
+  _timer: {fileID: 0}

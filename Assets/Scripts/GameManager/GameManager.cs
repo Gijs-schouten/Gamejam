@@ -12,14 +12,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private BeginSequenceTimer _timer;
     private bool _gameGoing = false;
-
-    /*
-     * Schakel in enemy de dood om naar destroy en niet setActive
-     * BeginSequenceTimer een action aanmaken en hier laten aanmelden
-     */
+    [SerializeField]
+    private int maxLevel;
 
     void Start() {
-        //meld hier de functie: ChangeGameGoing aan de action
         _timer.Going += ChangeGameGoing;
     }
 
@@ -28,16 +24,21 @@ public class GameManager : MonoBehaviour {
     }
 
     public void SetupCanvasActive() {
-        ChangeCanvasActive();
-        _canvasHandler.ChangeText(_checker.CheckSequence());
+        if (_gridSystem.GetGridLengt() == maxLevel) {
+            _canvasHandler.SetCanvasActive(false);
+            _canvasHandler.ChangeText(true);
+        } else {
+            ChangeCanvasActive();
+            _canvasHandler.ChangeText(false);
+        }
     }
 
     public void ChangeCanvasActive() {
-        _canvasHandler.SetCanvasActive(true);
+        _canvasHandler.SetCanvasActive(_checker.CheckSequence());
     }
 
     public void ChangeCanvasDeactive() {
-        _canvasHandler.SetCanvasActive(false);
+        _canvasHandler.DeactivateCanvases();
     }
 
     private void EnemiesRemoved() {
@@ -49,8 +50,8 @@ public class GameManager : MonoBehaviour {
             }
         }
         if (amount <= 0 && _gameGoing) {
-            SetupCanvasActive();
             ChangeGameGoing();
+            SetupCanvasActive();
         }
     }
 
