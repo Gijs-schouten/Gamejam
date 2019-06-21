@@ -17,6 +17,8 @@ public class BeginSequenceTimer : MonoBehaviour {
     public Action Going;
     public bool Playing = false;
 	private Animator _player;
+	[SerializeField]
+	private GridSystem _gridSystem;
 
 	// Start is called before the first frame update
 	void Start() {
@@ -42,7 +44,7 @@ public class BeginSequenceTimer : MonoBehaviour {
         foreach (GameObject _enemy in _grid.GetAllEnemyInNodesAsGameObject()) {
             if (_enemy) _enemy.GetComponent<Enemy>()._canMove = true;
         }
-        _CanvasObject.SetActive(false);
+		_CanvasObject.SetActive(false);
         Playing = true;
 		yield return new WaitForSeconds(5);
 		Aniamtoekasmnkenko();
