@@ -1339,10 +1339,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 03ac2a525dbaf8c458f178fe786de275, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.77, y: 1.97}
@@ -1359,7 +1359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069048052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1837,7 +1837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550542606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85, y: 0, z: 0}
+  m_LocalPosition: {x: 4.7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2485,6 +2485,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3359602335735504320, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3359602334957857215, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2590,16 +2595,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 607984320760145714, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
-        type: 3}
-      propertyPath: _sceneSwitcher
-      value: 
-      objectReference: {fileID: 931479130}
-    - target: {fileID: 3359602335735504320, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3359602335683520536, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -2615,6 +2610,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1985868933}
+    - target: {fileID: 607984320760145714, guid: 0ce9de73393cd0d4b984a2744a1ad0e3,
+        type: 3}
+      propertyPath: _sceneSwitcher
+      value: 
+      objectReference: {fileID: 931479130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce9de73393cd0d4b984a2744a1ad0e3, type: 3}
 --- !u!1 &2047416923
@@ -2801,6 +2801,8 @@ MonoBehaviour:
   - {fileID: 1819594685}
   - {fileID: 2047416923}
   - {fileID: 615855211}
+  - {fileID: 1782424264}
+  - {fileID: 638696859}
   _highlight: {fileID: 3374106118752609234, guid: c95133d14e4453c4a9a818623b81c161,
     type: 3}
   _generator: {fileID: 2144424016}
