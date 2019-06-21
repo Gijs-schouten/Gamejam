@@ -38,8 +38,7 @@ public class GridSystem : MonoBehaviour {
         SpawnNodes();
     }
 
-    public void RemoveAllEnemyFromNode()
-    {
+    public void RemoveAllEnemyFromNode() {
         RemoveEnemysFromNodes();
     }
 

@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
+public class GameManager : MonoBehaviour {
     [SerializeField]
     private CanvasHandler _canvasHandler;
     [SerializeField]
@@ -49,9 +48,7 @@ public class GameManager : MonoBehaviour
                 amount++;
             }
         }
-        Debug.Log(amount + " " + _gameGoing);
         if (amount <= 0 && _gameGoing) {
-            print("HEY!!!");
             SetupCanvasActive();
             ChangeGameGoing();
         }

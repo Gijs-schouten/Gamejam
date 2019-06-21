@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CanvasHandler : MonoBehaviour
-{
+public class CanvasHandler : MonoBehaviour {
     [SerializeField]
     private string _winText;
     [SerializeField]

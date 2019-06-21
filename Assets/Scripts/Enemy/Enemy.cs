@@ -25,15 +25,14 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Update() {
-        if(_canMove) {
+        if (_canMove) {
             MovementToDestinationPoint(_destinationPoint);
         }
 
     }
 
     private void MovementToDestinationPoint(Transform destinationPoint) {
-        if(!_destinationPointScript._enemyIsOnPoint)
-        {
+        if (!_destinationPointScript._enemyIsOnPoint) {
             transform.position = Vector3.MoveTowards(this.transform.position, destinationPoint.transform.position, _enemySpeed * Time.deltaTime);
         }
 
