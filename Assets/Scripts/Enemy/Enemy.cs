@@ -18,10 +18,14 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     private DestinationPoint _destinationPointScript;
 
+    private SpriteManager _spriteManager;
+
     private void Start() {
         _audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         _destinationPoint = GameObject.Find("DeathPoint").transform;
         _destinationPointScript = _destinationPoint.GetComponent<DestinationPoint>();
+        _spriteManager = GameObject.Find("SpriteManager").GetComponent<SpriteManager>();
+        _spriteManager.InitSprite(gameObject);
     }
 
     private void Update() {
