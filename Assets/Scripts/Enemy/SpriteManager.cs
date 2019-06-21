@@ -10,7 +10,7 @@ public class SpriteManager : MonoBehaviour
 
 
     public void InitSprite(GameObject _enemy) {
-        _SpriteObject = _enemy.gameObject.transform.GetChild(0).gameObject;
+        _SpriteObject = _enemy.gameObject;
         _SpriteRenderer = _SpriteObject.GetComponent<SpriteRenderer>();
         _SpriteRenderer.sprite = _Sprites[_enemy.GetComponent<Enemy>()._enemyIndexNumber];
     }
