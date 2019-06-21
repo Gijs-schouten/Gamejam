@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canMove: 0
   _enemySpeed: 5
-  _enemyIndexNumber: 2
+  _enemyIndexNumber: 3
   _destinationPointScript: {fileID: 0}
 --- !u!82 &8223380228080161528
 AudioSource:
@@ -218,7 +218,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
