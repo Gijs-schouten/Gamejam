@@ -1,2 +1,2 @@
 # Gamejam
-Game jam XR lab
+XR jam game lab

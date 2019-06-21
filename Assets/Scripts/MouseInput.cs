@@ -5,6 +5,8 @@ using UnityEngine;
 public class MouseInput : MonoBehaviour {
     public bool _canbuild = false;
     private GameObject _spawnedObject;
+    [SerializeField]
+    private BeginSequenceTimer _timer;
 
     public Vector3 MousePosition() {
         RaycastHit hit;
@@ -21,7 +23,7 @@ public class MouseInput : MonoBehaviour {
             _spawnedObject.transform.position = MousePosition();
             RaycastHit hit;
             if (Physics.Raycast(MousePosition(), new Vector3(0, 0, 1), out hit, Mathf.Infinity)) {
-                if (Input.GetMouseButtonDown(0)) {
+                if (Input.GetMouseButtonDown(0) && hit.collider.gameObject.tag == "node" && _timer.Playing == false) {
                     if (hit.collider.gameObject.GetComponent<Node>().CanPlaceEnemyHere()) {
                         hit.collider.gameObject.GetComponent<Node>().addEnemy(_spawnedObject);
                         TurnOffPlaceMode();
