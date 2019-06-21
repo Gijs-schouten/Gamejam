@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8223380228080161528}
   - component: {fileID: 264436944813222072}
   - component: {fileID: 7779469848455414442}
-  - component: {fileID: 1770151766677186342}
+  - component: {fileID: 8223380229237255834}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 8223380228080161525}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3b94778df157b4347bd90ebc1dc580eb, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -179,7 +179,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!212 &1770151766677186342
+--- !u!212 &8223380229237255834
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeginSequenceTutorial : MonoBehaviour {
 
@@ -61,6 +62,7 @@ public class BeginSequenceTutorial : MonoBehaviour {
 	private void HighlightEnemy(Transform transform) {
 		GameObject clone = Instantiate(_highlight, transform, false);
 		clone.transform.position = transform.position;
-		UILifeTime lifetime = UILifeTime.CreateComponent(clone, _time);
+
+        UILifeTime lifetime = UILifeTime.CreateComponent(clone, _time);
 	}
 }
