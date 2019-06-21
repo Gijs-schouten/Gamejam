@@ -821,7 +821,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1551290946}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2144424014}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20334e773f298254baa37b8f52176765, type: 3}
@@ -2081,12 +2081,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d302e93ae3ab294c8d0cb4a29a7dc6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _highlight: {fileID: 3374106118752609234, guid: c95133d14e4453c4a9a818623b81c161,
-    type: 3}
-  _generator: {fileID: 2144424016}
+  _tutorialLevels: 3
+  _time: 0.7
   _enemySlots:
   - {fileID: 748042828}
   - {fileID: 1819594685}
   - {fileID: 2047416923}
   - {fileID: 615855211}
-  _time: 0.7
+  _highlight: {fileID: 3374106118752609234, guid: c95133d14e4453c4a9a818623b81c161,
+    type: 3}
+  _generator: {fileID: 2144424016}
+  _system: {fileID: 1498543669}
