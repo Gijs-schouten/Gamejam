@@ -48,7 +48,7 @@ MonoBehaviour:
   _checker: {fileID: 0}
   _gridSystem: {fileID: 0}
   _timer: {fileID: 0}
-  maxLevel: 3
+  maxLevel: 8
 --- !u!114 &6820603312088261525
 MonoBehaviour:
   m_ObjectHideFlags: 0

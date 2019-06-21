@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour {
                 amount++;
             }
         }
+        Debug.Log(amount + " " + _gameGoing);
         if (amount <= 0 && _gameGoing) {
             ChangeGameGoing();
             SetupCanvasActive();
@@ -57,5 +58,9 @@ public class GameManager : MonoBehaviour {
 
     private void ChangeGameGoing() {
         _gameGoing = !_gameGoing;
+    }
+
+    public bool GetGameGoing() {
+        return _gameGoing;
     }
 }
