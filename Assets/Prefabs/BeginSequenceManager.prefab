@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0486d305aae04645b99ec81061919d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _beginSequenceLength: 0
+  _beginSequenceInts: 
+  _beginSequenceLength: 1
   _NumberOfEnemyTypes: 4
   _audioDone: 0
   _audioManager: {fileID: 0}
-  _checker: {fileID: 0}
+  _checker: {fileID: 2129937261244746158}
 --- !u!114 &2129937261244746158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,3 +76,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _PlanningTime: 20
+  Playing: 0

@@ -15,6 +15,10 @@ public class GridSystem : MonoBehaviour {
         SpawnNodes();
     }
 
+    public int GetGridLengt() {
+        return _gridLengt;
+    }
+
     private void SpawnNodes() {
         DestroyNodes();
         Nodes = new Node[_gridLengt];
@@ -38,8 +42,7 @@ public class GridSystem : MonoBehaviour {
         SpawnNodes();
     }
 
-    public void RemoveAllEnemyFromNode()
-    {
+    public void RemoveAllEnemyFromNode() {
         RemoveEnemysFromNodes();
     }
 

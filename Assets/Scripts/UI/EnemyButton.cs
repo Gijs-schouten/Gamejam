@@ -9,7 +9,6 @@ public class EnemyButton : MonoBehaviour
     [SerializeField] private int _enemyIndex;
 
     private AudioManager _audioManager;
-    [SerializeField] private MouseInput _mouseInput;
     private Enemy _enemyScript;
 
     private void Start() {
@@ -19,10 +18,10 @@ public class EnemyButton : MonoBehaviour
     public void ButtonClick() 
     {
         //it's funny because it's true
-        if (_mouseInput._canbuild != false) {
+        if (MouseInput._canbuild != false) {
             MouseInput.DestroyBuildable();
         }
-        if (_mouseInput._canbuild == false) {
+        if (MouseInput._canbuild == false) {
             _enemyScript = enemy.GetComponent<Enemy>();
             _enemyScript._enemyIndexNumber = _enemyIndex;
             _audioManager.PlayAudioClip(_enemyIndex);
