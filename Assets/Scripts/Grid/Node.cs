@@ -19,6 +19,7 @@ public class Node : MonoBehaviour {
         }
     }
     public void RemoveEnemy() {
+        Destroy(_currentEnemy);
         _currentEnemy = null;
     }
 }
