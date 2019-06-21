@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ public class BeginSequenceTimer : MonoBehaviour {
     private BeginSequenceGenerator _generator;
     private GridSystem _grid;
     private Checker _checker;
+    public Action Going;
 
     // Start is called before the first frame update
     void Start() {
@@ -37,10 +39,8 @@ public class BeginSequenceTimer : MonoBehaviour {
         }
         _CanvasObject.SetActive(false);
         _checker.FillTheirSequence(_grid.GetAllEnemyInNodes());
-        Debug.Log(_checker.CheckSequence());
-        _grid.RemoveAllEnemyFromNode();
-
-        ResetGame(); //Weg en aangeroepen worden door Colin's script
+        yield return new WaitForSeconds(5);
+        Going();
     }
 
     public void ResetGame() {

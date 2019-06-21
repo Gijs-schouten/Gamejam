@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private Checker _checker;
     [SerializeField]
     private GridSystem _gridSystem;
+    [SerializeField]
+    private BeginSequenceTimer _timer;
     private bool _gameGoing = false;
 
     /*
@@ -19,25 +21,39 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         //meld hier de functie: ChangeGameGoing aan de action
+        _timer.Going += ChangeGameGoing;
     }
 
     void Update() {
         EnemiesRemoved();
     }
 
-    private void SetupCanvasActive() {
+    public void SetupCanvasActive() {
         ChangeCanvasActive();
         _canvasHandler.ChangeText(_checker.CheckSequence());
     }
 
-    private void ChangeCanvasActive() {
-        _canvasHandler.SetCanvasActive();
+    public void ChangeCanvasActive() {
+        _canvasHandler.SetCanvasActive(true);
+    }
+
+    public void ChangeCanvasDeactive() {
+        _canvasHandler.SetCanvasActive(false);
     }
 
     private void EnemiesRemoved() {
-        int amount = _gridSystem.GetAllEnemyInNodes().Count;
+        List<GameObject> enemyList = _gridSystem.GetAllEnemyInNodesAsGameObject();
+        int amount = 0;
+        for (int i = 0; i < enemyList.Count; i++) {
+            if (enemyList[i] != null) {
+                amount++;
+            }
+        }
+        Debug.Log(amount + " " + _gameGoing);
         if (amount <= 0 && _gameGoing) {
+            print("HEY!!!");
             SetupCanvasActive();
+            ChangeGameGoing();
         }
     }
 

@@ -18,7 +18,7 @@ public class CanvasHandler : MonoBehaviour
         _text.text = (winContition) ? _winText : _loseText;
     }
 
-    public void SetCanvasActive() {
-        _Endscreen.enabled = !_Endscreen.enabled;
+    public void SetCanvasActive(bool setbool) {
+        _Endscreen.gameObject.SetActive(setbool);
     }
 }
