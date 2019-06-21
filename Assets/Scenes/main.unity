@@ -1732,6 +1732,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5367ef3fbcd3b44429c9e2da5f4614ee, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b92ee546ee0ce994d999da310f697a3d, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3b06804f578c624b932a94c1ade5a83, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f206048694e1814c825a5711517c544, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f8334d6abaaf0194a99d9803906d4acd, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ccd5a08f6fece84aa24d5a88af98901, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: e3e840f6d6fac7d42b4801ba61cc9666, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bdc1db27db7cad4891481c71d2f1b64, type: 3}
+    - target: {fileID: 5614578666949634505, guid: 99327872c1dd0f941af1056e8a12a5e2,
+        type: 3}
+      propertyPath: _clips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 70f4d4e195c15574d9798f200a2bd9b8, type: 3}
     - target: {fileID: 5614578666949634510, guid: 99327872c1dd0f941af1056e8a12a5e2,
         type: 3}
       propertyPath: m_Pitch
