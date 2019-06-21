@@ -13,6 +13,7 @@ public class BeginSequenceTimer : MonoBehaviour {
     private BeginSequenceGenerator _generator;
     private GridSystem _grid;
     private Checker _checker;
+    private EnemyButtonManager _EnemyButtonManager;
     public Action Going;
     public bool Playing = false;
 
@@ -21,6 +22,7 @@ public class BeginSequenceTimer : MonoBehaviour {
         _loop = _PlanningTime;
         _generator = gameObject.GetComponent<BeginSequenceGenerator>();
         _CanvasObject = GameObject.Find("Canvas").transform.GetChild(1).gameObject;
+        _EnemyButtonManager = GameObject.Find("ui enemy").GetComponent<EnemyButtonManager>();
         _text = _CanvasObject.GetComponent<Text>();
         _grid = GameObject.Find("Grid").GetComponent<GridSystem>();
         _checker = GetComponent<Checker>();
@@ -47,6 +49,8 @@ public class BeginSequenceTimer : MonoBehaviour {
 
     public void ResetGame() {
         _CanvasObject.SetActive(true);
+        _EnemyButtonManager.UpdateButtons();
+        //sequence moet een extra sound krijgen
         _generator.ExtendSequence();
         _grid.ExtendNodes();
         Playing = false;
