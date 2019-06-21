@@ -8,17 +8,23 @@ public class ButtonPanelActions : MonoBehaviour {
     private SceneSwitcher _sceneSwitcher;
 
     public void Retry(){
-        Debug.Log("Retry");
         _sceneSwitcher.SwitchScenes(1);
     }
 
     public void Menu() {
-        Debug.Log("Menu");
         _sceneSwitcher.SwitchScenes(0);
     }
 
     public void StartGame() {
         _sceneSwitcher.SwitchScenes(1);
+    }
+
+    public void Win() {
+        _sceneSwitcher.SwitchScenes(2);
+    }
+
+    public void Lose() {
+        _sceneSwitcher.SwitchScenes(3);
     }
 
     public void ExitGame() {
