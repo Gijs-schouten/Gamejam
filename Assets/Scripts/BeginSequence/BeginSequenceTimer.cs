@@ -16,11 +16,15 @@ public class BeginSequenceTimer : MonoBehaviour {
     private EnemyButtonManager _EnemyButtonManager;
     public Action Going;
     public bool Playing = false;
+	private Animator _player;
+	[SerializeField]
+	private GridSystem _gridSystem;
 
-    // Start is called before the first frame update
-    void Start() {
+	// Start is called before the first frame update
+	void Start() {
         _loop = _PlanningTime;
-        _generator = gameObject.GetComponent<BeginSequenceGenerator>();
+		_player = GameObject.Find("Player").GetComponent<Animator>();
+		_generator = gameObject.GetComponent<BeginSequenceGenerator>();
         _CanvasObject = GameObject.Find("Canvas").transform.GetChild(1).gameObject;
         _EnemyButtonManager = GameObject.Find("ui enemy").GetComponent<EnemyButtonManager>();
         _text = _CanvasObject.GetComponent<Text>();
@@ -40,11 +44,11 @@ public class BeginSequenceTimer : MonoBehaviour {
         foreach (GameObject _enemy in _grid.GetAllEnemyInNodesAsGameObject()) {
             if (_enemy) _enemy.GetComponent<Enemy>()._canMove = true;
         }
-        _CanvasObject.SetActive(false);
+		_CanvasObject.SetActive(false);
         Playing = true;
-        _checker.FillTheirSequence(_grid.GetAllEnemyInNodes());
-        yield return new WaitForSeconds(5);
-        Going();
+		yield return new WaitForSeconds(5);
+		Aniamtoekasmnkenko();
+		Going();
     }
 
     public void ResetGame() {
@@ -64,4 +68,8 @@ public class BeginSequenceTimer : MonoBehaviour {
         _loop = _PlanningTime;
         StartCoroutine(CountDown());
     }
+
+	private void Aniamtoekasmnkenko() {
+		_player.SetBool("shoot", false);
+	}
 }
