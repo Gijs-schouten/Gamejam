@@ -22,5 +22,6 @@ public class SplashParticles : MonoBehaviour
             Splash splashScript = splash.GetComponent<Splash>();
             splashScript.Initialize(Splash.SplashLocation.Ground);
         }
+
     }
 }

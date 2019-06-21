@@ -19,6 +19,8 @@ public class Splash : MonoBehaviour
     private SplashLocation _splashLocation;
     private SpriteRenderer _spriteRenderer;
 
+    public float _timeUntilDestroy;
+
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -32,6 +34,7 @@ public class Splash : MonoBehaviour
         SetSize();
         SetRotation();
         SetLocationProperties();
+        StartCoroutine(SetDestroy(_timeUntilDestroy));
     }
 
     private void SetSprite()
@@ -66,5 +69,11 @@ public class Splash : MonoBehaviour
                 _spriteRenderer.sortingOrder = 3;
                 break;
         }
+    }
+
+    IEnumerator SetDestroy(float timeUntilDestroy)
+    {
+        yield return new WaitForSeconds(timeUntilDestroy);
+        Destroy(this.gameObject);
     }
 }
