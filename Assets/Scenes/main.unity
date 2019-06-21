@@ -1868,6 +1868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BeginSequenceManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3861628063926162562, guid: 90c73ca187a59334bbdc5c80c8f31cf5,
+        type: 3}
+      propertyPath: _gridSystem
+      value: 
+      objectReference: {fileID: 1498543669}
     - target: {fileID: 6959354943488495901, guid: 90c73ca187a59334bbdc5c80c8f31cf5,
         type: 3}
       propertyPath: m_LocalPosition.x
